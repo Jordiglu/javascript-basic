@@ -57,9 +57,29 @@ for (let i = 0; i < objecte.length; i++) {
 console.log("-----------------------------------------------");
 
 
-//calculadora//
+//Calculadora nivel-1//
 
 function calculadora(operador, valor1, valor2) {
+    var resultat;
+    if (operador == "suma") {
+        return valor1 + valor2;
+
+    } else if (operador == "resta") {
+        return valor1 - valor2;
+
+    } else if (operador == "multiplicacio") {
+        return valor1 * valor2;
+
+    } else { }
+}
+resultat = calculadora("suma", 10, 13);
+document.write("El resultat de l'operació es: " + resultat + "<br/>");
+
+
+
+//Calculadora nivel-2//
+function calculadora(operador, valor1, valor2) {
+    var resultat;
     if (operador == "suma") {
         return valor1 + valor2;
     } else if (operador == "resta") {
@@ -68,11 +88,18 @@ function calculadora(operador, valor1, valor2) {
     } else if (operador == "multiplicacio") {
         return valor1 * valor2;
 
+    }
+    else if (operador == "divisio" && valor2 == 0) {
+        return "El numero es Infinito";
+    }
+    else if (operador == "divisio") {
+        return valor1 / valor2;
+
     } else {
 
     }
 }
-resultat = calculadora("multiplicacio", 5, 7);
+resultat = calculadora("divisio", 10, 0);
 document.write("El resultat de l'operació es: " + resultat);
 
 
